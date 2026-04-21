@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="420.0" prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controlador.ControladorCuestionario">
+
+    <children>
+
+        <!-- TÍTULO -->
+        <Label layoutX="120.0" layoutY="20.0"
+               text="Cuestionario - Desarrollo de Software">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+
+        <!-- PREGUNTA -->
+        <Label layoutX="50.0" layoutY="80.0" text="Pregunta:">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+
+        <Label fx:id="lblPregunta"
+               layoutX="50.0"
+               layoutY="110.0"
+               prefWidth="500.0"
+               wrapText="true"
+               text="Presione 'Nueva pregunta' para comenzar">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+
+        <!-- RESPUESTA -->
+        <Label layoutX="50.0" layoutY="180.0" text="Tu respuesta:">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="txtRespuesta"
+                   layoutX="50.0"
+                   layoutY="210.0"
+                   prefWidth="500.0"/>
+
+        <!-- BOTÓN NUEVA PREGUNTA -->
+        <Button layoutX="150.0"
+                layoutY="260.0"
+                prefWidth="180.0"
+                text="Nueva pregunta"
+                onAction="#cargarPregunta"/>
+
+        <!-- BOTÓN VALIDAR (IMPORTANTE fx:id) -->
+        <Button fx:id="btnValidar"
+                layoutX="360.0"
+                layoutY="260.0"
+                prefWidth="180.0"
+                text="Validar respuesta"
+                onAction="#enviarRespuesta"/>
+
+        <!-- RESULTADO -->
+        <Label layoutX="50.0" layoutY="320.0" text="Resultado:">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+
+        <Label fx:id="lblResultado"
+               layoutX="150.0"
+               layoutY="320.0"
+               prefWidth="400.0"
+               text="--">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+
+    </children>
+
+</Pane>
